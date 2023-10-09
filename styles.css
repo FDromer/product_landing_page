@@ -1,0 +1,280 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}  
+
+:root {
+  --bgk-color: #eee;
+  --text-nav-color: #000;
+  --bgk-btn-color: #f1c40f;
+  --icon-opt-color: #ff8c00;
+  --price-bgk-color: #ddd;
+  --foo-color: #444;
+}
+
+body {
+  background-color: var(--bgk-color);
+  font-family: Lato, sans-serif;
+}
+
+.main-content {
+  position: relative;
+  top: 6.3125rem;
+}
+
+.logo {
+  width: 60vw;
+}
+
+#header-img {
+  max-width: 300px;
+  width: 100%;
+  height: 100%;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;  
+  z-index: 100;
+  min-height: 75px; 
+  padding: 0px 20px;
+  background-color: var(--bgk-color);
+}
+
+#nav-bar {
+  font-weight: 400;
+  width: 40vw;
+}
+
+#nav-bar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+li { 
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-nav-color);
+}
+
+#mail-section,
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#mail-section h2 {
+  margin-bottom: 20px;
+}
+
+#mail-section input[type="email"] {
+  margin-bottom: 15px; 
+  max-width: 275px;
+  min-width: 100%;
+  padding: 5px;
+  width: 275px;
+  height: 30px;
+}
+
+#mail-section input[type="submit"] {
+  max-width: 150px;
+  width: 100%;
+  height: 30px;
+  background-color: var(--bgk-btn-color);
+  border: none;
+  font-weight: 900;
+  font-size: 1em;
+}
+
+.container,
+footer {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#features {
+  margin-top: 70px;
+}
+
+.grid {
+  display: flex;
+}
+
+#features .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 20vw;
+  color: var(--icon-opt-color);
+}
+
+#features .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 5px;
+}
+
+.fa-solid {
+  font-weight: 900;
+  font-size: 3em;
+}
+
+#how-it-work {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#video {
+  width: 500px;
+}
+
+#pricing {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0px 90px 0px;
+  flex-direction: row;
+  width: 100%;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid var(--text-nav-color);
+  margin: 10px;
+  width: calc(100% / 3); 
+}
+
+.product > h2 {
+  margin-top: 15px;
+}
+
+.product > ol {
+  margin: 15px 0;
+}
+
+.product > ol > li {
+  padding: 5px 0;
+}
+
+.item {
+  background-color: var(--price-bgk-color);
+  padding: 15px 0px;
+  color: var(--text-nav-color);
+  width: 100%;
+  font-weight: 700;
+}
+
+.product > button {
+  border: 0;
+  margin: 15px 0;
+  font-weight: 400;
+  background-color: var(--bgk-btn-color);
+}
+
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: var(--price-bgk-color);
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: var(--foo-color);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 800px) {
+  #pricing {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  nav > ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    padding-bottom: 5px;
+  }
+
+  #mail-section h2 {
+    margin-top: 20px;
+  }
+
+  #features {
+    margin-top: 0;
+  }
+  
+}
+
+@media (max-width: 550px) {
+  #features .text {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+}
